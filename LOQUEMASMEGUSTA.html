@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS3/jugadores.css">
+    <title>BASQUETBOL</title>
+
+</head>
+
+<body>
+
+    <div class="letra">
+    <center>
+        <h2>MI JUGADORES FAVORITOS DE LA NBA</h2>
+    </center>
+</div>
+    <div class="container">
+        
+
+        <img id="jugadores" src="imagenes/gianis.jpg">
+        <div class="opciones">
+            <div class="color-opcion" style="background-color: green;" onclick="cambiarImagen('gianis', 'DESCRIPCION DE LOS JUGADORES: Giannis Antetokounmpo es un baloncestista greco-nigeriano que pertenece a la plantilla de los Milwaukee Bucks de la NBA. Con 2,11 metros de altura, juega en la posición de ala-pívot, pero debido a su gran versatilidad es capaz de jugar tanto de alero como de pívot.')"></div>
+            <div class="color-opcion" style="background-color: white;" onclick="cambiarImagen('kevin', 'DESCRIPCION DE LOS JUGADORES: Kevin Durant  es un jugador de baloncesto estadounidense que pertenece a la plantilla de los Phoenix Suns de la NBA. Con 2,11 metros de altura, juega en la posición de alero.')"></div>
+            <div class="color-opcion" style="background-color: blue;" onclick="cambiarImagen('kawai', 'DESCRIPCION DE LOS JUGADORES: Kawhi Leonard  es un jugador de baloncesto estadounidense que pertenece a la plantilla de Los Angeles Clippers de la NBA. Con 2,01 metros de estatura, juega en la posición de alero.')"></div>
+            <div class="color-opcion" style="background-color: yellow;" onclick="cambiarImagen('shap', 'DESCRIPCION DE LOS JUGADORES: Shaquille O\'Neal es un exjugador de baloncesto estadounidense, que disputó 19 temporadas en la NBA. Con 2,16 metros de altura, jugaba en la posición de pívot.​')"></div>
+        </div>
+        
+        <div class="descripcion" id="descripcion-jugador">DESCRIPCION DE LOS JUGADORES: 
+        Giannis Antetokounmpo es un baloncestista greco-nigeriano que pertenece a la plantilla de los Milwaukee Bucks de la NBA. Con 2,11 metros de altura, juega en la posición de ala-pívot, pero debido a su gran versatilidad es capaz de jugar tanto de alero como de pívot.
+        </div>
+
+
+    </div>
+    <script>
+        function cambiarImagen(jugador, descripcion) {
+            var rutaImagen = obtenerRutaImagen(jugador);
+            document.getElementById("jugadores").src = rutaImagen;
+            document.getElementById("descripcion-jugador").innerText = descripcion;
+        }
+
+        function obtenerRutaImagen(jugador) {
+            // Definir la ruta base de las imágenes
+            var rutaBase = "imagenes/";
+
+            // Definir la extensión de las imágenes
+            var extension = ".jpg";
+
+            // Concatenar el nombre del jugador con la ruta base y la extensión
+            var rutaImagen = rutaBase + jugador + extension;
+
+            return rutaImagen;
+
+            
+        }
+
+    </script>
+</body>
+</html>
