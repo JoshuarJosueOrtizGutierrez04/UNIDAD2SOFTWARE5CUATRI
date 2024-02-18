@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+
+<title>Tabla de Multiplicar</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px auto;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+</style>
+</head>
+<body>
+
+<center>
+<div class="letra">
+
+<h2>Tabla de Multiplicar</h2>
+
+<form id="multiplicationTableForm">
+    <label for="number">Ingrese un número:</label>
+    <input type="number" id="number" required>
+    <input type="submit" value="Generar Tabla">
+</form>
+
+<div id="tableContainer"></div>
+</center>
+</div>
+
+<script>
+    document.getElementById("multiplicationTableForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe
+
+        // Obtener el número ingresado por el usuario
+        var number = parseInt(document.getElementById("number").value);
+
+        // Crear la tabla de multiplicar
+        var tableHtml = "<h3>Tabla de Multiplicar del " + number + "</h3>";
+        tableHtml += "<table>";
+        tableHtml += "<tr><th>Multiplicando</th><th>Multiplicador</th><th>Resultado</th></tr>";
+        for (var i = 1; i <= 10; i++) {
+            var resultado = number * i;
+            tableHtml += "<tr><td>" + number + "</td><td>" + i + "</td><td>" + resultado + "</td></tr>";
+        }
+        tableHtml += "</table>";
+
+        // Mostrar la tabla en el contenedor
+        document.getElementById("tableContainer").innerHTML = tableHtml;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+<title>Comprobación de Año Bisiesto</title>
+
+</head>
+<body>
+<center>
+<div class="letra">
+<h2>Comprobación de Año Bisiesto</h2>
+
+<label for="year">Ingrese un año:</label>
+<input type="number" id="year" name="year" placeholder="Ingrese un año">
+<button onclick="esBisiesto()">Comprobar</button>
+
+<p id="resultado"></p>
+
+</div>
+</center>
+</body>
+
+
+<script>
+  function esBisiesto() {
+    // Obtener el año ingresado por el usuario
+    let year = parseInt(document.getElementById("year").value);
+    
+    // Verificar si el año es bisiesto
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+      document.getElementById("resultado").innerHTML = year + " es un año bisiesto.";
+    } else {
+      document.getElementById("resultado").innerHTML = year + " no es un año bisiesto.";
+    }
+  }
+</script>
+</html>

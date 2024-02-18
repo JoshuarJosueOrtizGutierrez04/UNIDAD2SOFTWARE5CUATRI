@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+<title>Calculadora de Promedio</title>
+<style>
+    form {
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+<center>
+<div class="letra">
+<h2>Calcular de Promedio</h2>
+
+<form id="averageCalculatorForm">
+    <label for="numbers">Ingrese los números separados por comas:</label>
+    <input type="text" id="numbers" required>
+    <input type="submit" value="Calcular Promedio">
+</form>
+
+<div id="resultado"></div>
+</center>
+</div>
+
+<script>
+    document.getElementById("averageCalculatorForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Obtiene los números ingresados por el usuario
+        var numbersString = document.getElementById("numbers").value;
+
+        // Convierte la cadena de números separados por comas en un array
+        var numbersArray = numbersString.split(",");
+
+        // Convierte los números del array a números flotantes
+        var numbers = numbersArray.map(function(num) {
+            return parseFloat(num.trim());
+        });
+
+        // Calcula el promedio
+        var sum = numbers.reduce(function(acc, curr) {
+            return acc + curr;
+        }, 0);
+        var average = sum / numbers.length;
+
+        //  resultado
+        document.getElementById("resultado").innerHTML = "El promedio de los números ingresados es: " + average.toFixed(2);
+    });
+</script>
+
+</body>
+</html>

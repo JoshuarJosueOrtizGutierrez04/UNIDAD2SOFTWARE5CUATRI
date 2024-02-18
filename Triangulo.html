@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+<title>Calculadora de Área de Triángulo</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+<center>
+<div class="letra">
+<h2>Calculadora de Área de Triángulo</h2>
+
+<form id="triangleForm">
+    <label for="base">Base:</label>
+    <input type="number" id="base" required><br><br>
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" required><br><br>
+    <input type="submit" value="Calcular Área">
+</form>
+
+<div id="resultado"></div>
+</center>
+</div>
+
+<script>
+    document.getElementById("triangleForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe
+
+        // Obtener los valores de base y altura
+        var base = parseFloat(document.getElementById("base").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+
+        // Calcular el área del triángulo
+        var area = (base * altura) / 2;
+
+        // Mostrar el resultado
+        document.getElementById("resultado").innerHTML = "El área del triángulo es: " + area.toFixed(2);
+    });
+</script>
+
+</body>
+</html>

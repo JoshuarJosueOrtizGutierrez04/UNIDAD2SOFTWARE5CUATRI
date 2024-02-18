@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+  <title>Saludo Personalizado</title>
+  <style>
+    #saludo {
+      font-size: 24px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<center>
+<div class="letra">
+<h1>Saludo Personalizado</h1>
+
+<input type="text" id="nombreInput" placeholder="Ingresa tu nombre">
+<button onclick="saludar()">Saludar</button>
+
+<p id="saludo"></p>
+</center>
+</div>
+
+<script>
+  function saludar() {
+    var nombre = document.getElementById("nombreInput").value;
+    var saludo = "¡Hola, " + nombre + "! Bienvenido.";
+    document.getElementById("saludo").innerText = saludo;
+  }
+</script>
+
+</body>
+</html>
+

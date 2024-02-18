@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+
+
+<title>Conversión de Celsius a Fahrenheit</title>
+
+<script>
+  function convertir() {
+    // Obtiene el valor de entrada en grados Celsius
+    let celsius = parseFloat(document.getElementById("celsius").value);
+    
+    // Convierte a grados Fahrenheit
+    let fahrenheit = (celsius * 9/5) + 32;
+    
+    // resultado
+    document.getElementById("resultado").innerHTML = celsius + " grados Celsius son equivalentes a " + fahrenheit.toFixed(2) + " grados Fahrenheit.";
+  }
+</script>
+</head>
+<body>
+
+  <center>
+<div class="letra">
+
+<h2>Conversión de Celsius a Fahrenheit</h2>
+
+<label for="celsius">Ingrese los grados Celsius:</label>
+<input type="number" id="celsius" name="celsius" placeholder="Ingrese grados Celsius" step="any">
+<button onclick="convertir()">Convertir</button>
+
+<p id="resultado"></p>
+</center>
+</div>
+
+</body>
+</html>

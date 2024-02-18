@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+<title>Verificación de Número Par o Impar</title>
+<style>
+    form {
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+    
+<center>
+<div class="letra">
+<h2>Verificación de Número Par o Impar</h2>
+
+<form id="evenOddForm">
+    <label for="number">Ingrese un número:</label>
+    <input type="number" id="number" required>
+    <input type="submit" value="Verificar">
+</form>
+
+<div id="resultado"></div>
+</center>
+</div>
+<script>
+    document.getElementById("evenOddForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        // Obtiene el número ingresado 
+        var number = parseInt(document.getElementById("number").value);
+
+        // Verificar si el número es par o impar
+        var result = number % 2 === 0 ? "par" : "impar";
+
+        // resultado
+        document.getElementById("resultado").innerHTML = "El número ingresado es " + result + ".";
+    });
+</script>
+
+</body>
+</html>

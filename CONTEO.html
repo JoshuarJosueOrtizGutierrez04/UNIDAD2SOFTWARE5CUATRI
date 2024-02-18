@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS3/EJERCICIOSTODOS.css">
+<title>Conteo de Clics</title>
+<script>
+  let conteo = 0;
+
+  function contar() {
+    conteo++;
+    document.getElementById("contador").innerHTML = "Has hecho clic " + conteo + " veces.";
+  }
+</script>
+</head>
+<body>
+
+<p id="contador">Haz clic <button onclick="contar()">aquí</button> para comenzar el conteo.</p>
+
+</body>
+</html>
