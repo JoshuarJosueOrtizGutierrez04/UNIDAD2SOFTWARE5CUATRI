@@ -1,0 +1,51 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/f5/8c/bd/f58cbd9fc7cf4f1f9dd2516093dcfc73.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    }
+            .container {
+                text-align: center;
+            }
+            .opciones {
+                background-color: black;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px; /* añadido para espaciar las descripciones */
+                border-radius: 50px;
+                
+            }
+            .color-opcion {
+                width: 50px;
+                height: 50px;
+                background-color: aqua;
+                border-radius: 50%;
+                display: inline-flex;
+                margin-right: 10px;
+            }
+            #jugadores {
+                border-radius: 50%;
+                width: 350px; /* ajusta el tamaño según sea necesario */
+                height: 350px; /* ajusta el tamaño según sea necesario */
+                margin-top: 50px; /* ajustado para mover hacia abajo */
+            }
+            .descripcion {
+                width: 250px; 
+                color: white; 
+                padding: 30px; 
+                background-color: black; 
+                border-radius: 50px; /*cuadro*/
+                margin-top: -380px;/*sube*/
+                text-align: center;
+               
+                
+                
+            }
+    
+            .letra{
+                font-size: large;
+                background-color: black; 
+                color: #f1f1f1;
+                border-radius: 20px; /*cuadro*/
+                padding: 10px; 
+                
+            }
