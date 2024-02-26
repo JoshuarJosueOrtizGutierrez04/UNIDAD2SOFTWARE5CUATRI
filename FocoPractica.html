@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS3/FOCOPRACT.css">
+    <title>FOCO PRACTICA</title>
+</head>
+<body>
+    <div class="letra">
+        <center>
+            <h2>PREIONA AL BOTON PARA PRENDER O APAGAR EL FOCO</h2>
+        </center>
+    </div>
+    <div class="container">
+        <img id="focopract" src="imagenes/foco1.jpeg">
+        <div class="opciones">
+            <div class="color-opcion" style="background-color: blue" onclick="PrenderElFoco()"></div>
+        </div>
+    </div>
+
+    <script>
+        var focoEncendido = false;
+
+        function PrenderElFoco() {
+            focoEncendido = !focoEncendido; // Cambia el estado del foco
+
+            if (focoEncendido) {
+                cambiarImagen('foco2');
+            } else {
+                cambiarImagen('foco1');
+            }
+        }
+
+        
+        function cambiarImagen(focopract) {
+            var rutaImagen = obtenerRutaImagen(focopract);
+            document.getElementById("focopract").src = rutaImagen;
+        }
+
+        function obtenerRutaImagen(focopract) {
+            // Definir la ruta base de las imágenes
+            var rutaBase = "imagenes/";
+
+            // Definir la extensión de las imágenes
+            var extension = ".jpeg";
+
+            // Concatenar el nombre del jugador con la ruta base y la extensión
+            var rutaImagen = rutaBase + focopract + extension;
+
+            return rutaImagen;
+        }
+    </script>
+</body>
+</html>
