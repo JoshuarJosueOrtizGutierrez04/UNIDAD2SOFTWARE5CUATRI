@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS3/LOTERIA.css">
+    <title>LOTERIA PRACTICA</title>
+</head>
+<body>
+    <div class="letra">
+        <center>
+            <h2>PRECIONA EL BOTON PARA QUE TE DE UNA CARTA ALETORIA</h2>
+        </center>
+    </div>
+    <div class="container">
+        <img id="LoteriaPrac" src="imagenes/loteria1.png">
+        <div class="opciones">
+            <div class="color-opcion" style="background-color: blue" onclick="cambiarImagenLoteria()"></div>
+        </div>
+    </div>
+
+    <script>
+        var imagenes = ['loteria1', 'loteria2', 'loteria3', 'loteria4', 'loteria5', 'loteria6', 'loteria7', 'loteria8', 'loteria9', 'loteria10']; // guarda las imagenes para que lo haga aletorio
+
+        function cambiarImagenLoteria() {
+            var indiceAleatorio = Math.floor(Math.random() * imagenes.length); // Genera una imagen aletoriamente
+            var rutaImagen = obtenerRutaImagen(imagenes[indiceAleatorio]); // Obtiene la ruta de la imagen seleccionada aleatoriamente
+
+            document.getElementById("LoteriaPrac").src = rutaImagen; // Actualiza la imagen 
+        }
+
+        function obtenerRutaImagen(nombreImagen) {
+            var rutaBase = "imagenes/"; // Ruta base de las imágenes
+            var extension = ".png"; 
+            return rutaBase + nombreImagen + extension; 
+        }
+    </script>
+</body>
+</html>
