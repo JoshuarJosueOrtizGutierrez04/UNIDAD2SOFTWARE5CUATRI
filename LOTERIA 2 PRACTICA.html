@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS3/loteria2.css">
+    <title>Seleccionar Imagen de Lotería</title>
+    
+    
+</head>
+<body>
+    <div class="letra">
+        <center>
+            <h2>Selecciona una imagen de la lotería joto</h2>
+        </center>
+    </div>
+    <div class="container">
+        <img id="MujeresCachondas" src="imagenes/loteria1.png">
+        <div class="opciones">
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria1')"><img src="imagenes/loteria1.png" alt="loteria1"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria2')"><img src="imagenes/loteria2.png" alt="loteria2"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria3')"><img src="imagenes/loteria3.png" alt="loteria3"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria4')"><img src="imagenes/loteria4.png" alt="loteria4"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria5')"><img src="imagenes/loteria5.png" alt="loteria5"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria6')"><img src="imagenes/loteria6.png" alt="loteria6"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria7')"><img src="imagenes/loteria7.png" alt="loteria7"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria8')"><img src="imagenes/loteria8.png" alt="loteria8"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria9')"><img src="imagenes/loteria9.png" alt="loteria9"></div>
+            <div class="color-opcion" onclick="cambiarImagenLoteria('loteria10')"><img src="imagenes/loteria10.png" alt="loteria10"></div>
+        </div>
+    </div>
+
+    <script>
+        function cambiarImagenLoteria(nombreImagen) {
+            var rutaImagen = obtenerRutaImagen(nombreImagen); 
+            document.getElementById("MujeresCachondas").src = rutaImagen; // Actualiza la imagen seleccionada
+        }
+
+        function obtenerRutaImagen(nombreImagen) {
+            var rutaBase = "imagenes/"; // Ruta base de las imágenes
+            var extension = ".png"; 
+            return rutaBase + nombreImagen + extension; 
+        }
+    </script>
+</body>
+</html>
